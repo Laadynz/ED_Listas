@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ListasDoblementeLigadas
 {
-    internal class Lista
+    public class Lista
     {
         Nodo nodoInicial;
         Nodo nodoActual;
-        Nodo nodoSiguiente;
+
         public Lista()
         {
             nodoInicial = new Nodo();
@@ -43,6 +43,7 @@ namespace ListasDoblementeLigadas
             }
             Nodo nodoNuevo = new Nodo(dato);
             nodoActual.Siguiente = nodoNuevo;
+            nodoNuevo.Anterior = nodoActual;
         }
         public Nodo Buscar(string dato)
         {
@@ -78,8 +79,8 @@ namespace ListasDoblementeLigadas
             }
             return null;
         }
-        
-        
+
+
         public void BorrarNodo(string dato)
         {
             if (ValidaVacio() == false)
@@ -87,13 +88,13 @@ namespace ListasDoblementeLigadas
                 nodoActual = Buscar(dato);
                 if (nodoActual != null)
                 {
-                    Nodo nodoAnterior = BuscarSiguiente(dato);
-                    nodoAnterior.Siguiente = nodoActual.Siguiente;
-                    nodoActual.Siguiente = null;
+
+                    nodoActual.Anterior.Siguiente = nodoActual.Siguiente;
+                    nodoActual.Siguiente.Anterior = nodoActual.Anterior;
+
                 }
             }
-        }
 
+        }
     }
-}
 }

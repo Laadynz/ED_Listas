@@ -10,11 +10,13 @@ namespace ListasDoblementeLigadas
     {
 
         public string Valor { get; set;}
+        public Nodo Anterior { get; set;}   
         public Nodo Siguiente { get; set;}
-        public Nodo(string valor = "", Nodo enlace = null)
+        public Nodo(string valor = "", Nodo anterior = null, Nodo siguiente = null)
         {
             Valor = valor;
-            Siguiente = enlace;
+            Anterior =  anterior;
+            Siguiente = siguiente;
         }
     }
 }
