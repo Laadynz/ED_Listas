@@ -1,6 +1,4 @@
-﻿
-
-using ListasDoblementeLigadasCirculares;
+﻿using ListasDoblementeLigadasCirculares;
 
 Lista listas = new Lista();
 listas.AgregarNodo("Cero");

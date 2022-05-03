@@ -6,16 +6,20 @@ using System.Threading.Tasks;
 
 namespace ListasDoblementeLigadasCirculares
 {
-    public class Nodo
-    {
-        public string Valor { get; set; }
-        public Nodo Enlace { get; set; }
-
-        public Nodo(string valor = "", Nodo enlace = null)
+    
+        public class Nodo
         {
-            Valor = valor;
-            Enlace = enlace;
+            public string Valor { get; set; }
+            public Nodo Enlace { get; internal set; }
+            public Nodo Anterior { get; set; }
+            public Nodo Siguiente { get; set; }
+
+            public Nodo(string valor = "", Nodo anterior = null, Nodo siguiente = null)
+            {
+                Valor = valor;
+                Anterior = anterior;
+                Siguiente = siguiente;
+            }
         }
     }
-}
 
