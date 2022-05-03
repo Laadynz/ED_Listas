@@ -8,7 +8,7 @@ listas.AgregarNodo("Ocho");
 Console.WriteLine(listas.RecorrerLista());
 Console.WriteLine("Buscando el siguiente al Ocho");
 Nodo nodoBusqueda = listas.Buscar("Ocho");
-Console.WriteLine(nodoBusqueda.Enlace.Valor);
+Console.WriteLine(nodoBusqueda.Siguiente.Valor);
 Console.WriteLine("Buscando nodo Dos");
 Nodo nodoDos = listas.Buscar("Dos");
 Console.WriteLine(nodoDos.Valor);

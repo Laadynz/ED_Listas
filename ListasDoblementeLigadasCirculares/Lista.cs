@@ -90,9 +90,8 @@ namespace ListasDoblementeLigadasCirculares
                 nodoActual = Buscar(dato);
                 if (nodoActual != null)
                 {
-                    Nodo nodoAnterior = BuscarAnterior(dato);
-                    nodoAnterior.Enlace = nodoActual.Enlace;
-                    nodoActual.Enlace = null;
+                    nodoActual.Anterior.Siguiente = nodoActual.Siguiente;
+                    nodoActual.Siguiente.Anterior = nodoActual.Anterior;
                 }
             }
         }
