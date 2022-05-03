@@ -10,7 +10,6 @@ namespace ListasDoblementeLigadasCirculares
         public class Nodo
         {
             public string Valor { get; set; }
-            public Nodo Enlace { get; internal set; }
             public Nodo Anterior { get; set; }
             public Nodo Siguiente { get; set; }
 
